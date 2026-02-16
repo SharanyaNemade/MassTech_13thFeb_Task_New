@@ -385,3 +385,61 @@ BEGIN
     WHERE RoleId = @RoleId;
 END;
 GO
+
+
+
+DROP PROCEDURE IF EXISTS sp_InsertRole;
+DROP PROCEDURE IF EXISTS sp_GetRoles;
+DROP PROCEDURE IF EXISTS sp_UpdateRole;
+GO
+
+
+
+
+
+CREATE PROCEDURE sp_InsertRole
+    @RoleName VARCHAR(100),
+    @Status VARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO Role (RoleName, Status)
+    VALUES (@RoleName, @Status);
+END;
+GO
+
+
+
+
+
+CREATE PROCEDURE sp_GetRoles
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT RoleId,
+           RoleName,
+           Status
+    FROM Role
+    ORDER BY RoleId DESC;
+END;
+GO
+
+
+
+
+CREATE PROCEDURE sp_UpdateRole
+    @RoleId INT,
+    @RoleName VARCHAR(100),
+    @Status VARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE Role
+    SET RoleName = @RoleName,
+        Status = @Status
+    WHERE RoleId = @RoleId;
+END;
+GO
