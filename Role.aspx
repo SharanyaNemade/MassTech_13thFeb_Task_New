@@ -76,32 +76,18 @@
     <br /><br />
 
     <!-- Grid View -->
+
+
     <asp:GridView ID="GridView1"
         runat="server"
         AutoGenerateColumns="false"
         CssClass="table table-bordered table-striped">
 
-        <Columns>
-            <asp:BoundField DataField="EventId" HeaderText="ID" />
-            <asp:BoundField DataField="EventName" HeaderText="Event Name" />
-            <asp:BoundField DataField="Status" HeaderText="Status" />
-
-            <asp:TemplateField HeaderText="Color">
-                <ItemTemplate>
-                    <span style='display:inline-block;
-                                 width:30px;
-                                 height:20px;
-                                 background-color:<%# Eval("Color") %>;
-                                 border:1px solid #000;'>
-                    </span>
-                    <%# Eval("Color") %>
-                </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:BoundField DataField="CreatedDate"
-                HeaderText="Created On"
-                DataFormatString="{0:dd-MM-yyyy}" />
-        </Columns>
+         <Columns>
+        <asp:BoundField DataField="RoleId" HeaderText="ID" />
+        <asp:BoundField DataField="RoleName" HeaderText="Role Name" />
+        <asp:BoundField DataField="Status" HeaderText="Status" />
+    </Columns>
 
     </asp:GridView>
 
