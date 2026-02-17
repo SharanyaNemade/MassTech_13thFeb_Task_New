@@ -448,7 +448,7 @@ GO
 
 
 
-/*-----------------------  AddEmp  -----------------------*/
+/*-----------------------  AddEmployees  -----------------------*/
 
 
 
@@ -618,6 +618,7 @@ BEGIN
         ProfilePhoto=@ProfilePhoto
     WHERE EmpId=@EmpId
 END
+
 
 
 
