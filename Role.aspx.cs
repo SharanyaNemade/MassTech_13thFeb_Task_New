@@ -24,8 +24,11 @@ namespace Task13Feb
                 SqlCommand cmd = new SqlCommand("sp_InsertRole", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("@RoleName", SqlDbType.VarChar, 100).Value = TextBox1.Text.Trim();
-                cmd.Parameters.Add("@Status", SqlDbType.VarChar, 20).Value = DropDownList1.SelectedValue;
+
+                //  It Needs to be replaced
+
+                /*cmd.Parameters.Add("@RoleName", SqlDbType.VarChar, 100).Value = TextBox1.Text.Trim();
+                cmd.Parameters.Add("@Status", SqlDbType.VarChar, 20).Value = DropDownList1.SelectedValue;*/
 
                 con.Open();
                 cmd.ExecuteNonQuery();
